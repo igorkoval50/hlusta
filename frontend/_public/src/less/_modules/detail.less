@@ -51,6 +51,9 @@
       top: 0;
       border-radius: 0;
       .semibold;
+      &:hover {
+        background-color: @hover_btn;
+      }
       .icon--arrow-right {
         display: none;
       }
@@ -78,6 +81,9 @@
   }
   .content--product-reviews {
     .is--primary {
+      &:hover {
+        background-color: @hover_btn;
+      }
       background-color: @red;
       background-image: none;
       width: 100%;
@@ -247,6 +253,9 @@
       color: @white;
       background: @red;
       border: 1px solid @red;
+      &:hover {
+        background-color: @hover_btn;
+      }
       &:before {
         content: "";
         background-image: url("../../img/icons/download-white.svg");
@@ -321,6 +330,80 @@
     .tab--link.has--content.is--active {
       color: @black;
     }
+  }
+  .image-slider--container .arrow.is--left:before, .image-slider--container .arrow.is--right:before {
+    content: "";
+    background-image: url("../../img/icons/arrow-left.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 19px;
+    display: inline-block;
+  }
+  .image-slider--container .arrow.is--right, .arrow.is--left {
+    border: none;
+  }
+  .image-slider--container .arrow.is--right:before {
+    transform: rotate(180deg);
+  }
+
+  .image-slider--container .arrow:hover {
+    border: none;
+  }
+  .image-slider--container .arrow.is--right {
+    margin-right: 20px;
+  }
+  .image-slider--container .arrow.is--left {
+    margin-left: 20px;
+  }
+  .product--box {
+    .price--unit {
+      display: none;
+    }
+  }
+  .box--slider  {
+    .product--price-info, .product--title {
+      text-align: left;
+      color: @regular-txt;
+      .regular;
+    }
+  }
+  //.product-slider--item {
+  //  width: 25% !important;
+  //}
+  //.product-slider--container {
+  //  display: flex;
+  //  flex-wrap: wrap;
+  //}
+  .hidden-slider {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .show-slider {
+    display: flex;
+    justify-content: center;
+    .btn {
+      width: 100%;
+      max-width: 182px;
+      height: 67px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      background: @red;
+      border: 1px solid @red;
+      color: @white;
+      &:hover {
+        background-color: @hover_btn;
+      }
+    }
+  }
+  .select-field select {
+    background-image: none;
+    border: 1px solid @dark;
+  }
+  .content--breadcrumb {
+    margin-bottom: 20px;
   }
 }
 
