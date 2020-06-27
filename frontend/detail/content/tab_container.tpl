@@ -1,6 +1,11 @@
 {extends file="parent:frontend/detail/content/tab_container.tpl"}
 {block name="frontend_detail_index_outer_tabs"}
     {$smarty.block.parent}
+    <div class="show-slider">
+        <button id="show_slider" class="btn">
+            {s name="frontend/_includes/show-button" namespace="frontend/_includes"}ZEIG MEHR{/s}
+        </button>
+    </div>
     <div class="instagram-block">
         <h2>Folge uns auf Instagram</h2>
         <div class="inst-items">
@@ -26,9 +31,4 @@
             </div>
         </div>
     </div>
-    {*<div class="show-slider">*}
-        {*<button id="show_slider" class="btn">*}
-            {*{s name="frontend/_includes/show-button" namespace="frontend/_includes"}ZEIG MEHR{/s}*}
-        {*</button>*}
-    {*</div>*}
 {/block}

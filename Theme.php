@@ -24,6 +24,10 @@ SHOPWARE_EOD;
 hlusta
 SHOPWARE_EOD;
 
+    protected $javascript = [
+        'src/js/custom.js'
+    ];
+
     public function createConfig(Form\Container\TabContainer $container)
     {
     }
