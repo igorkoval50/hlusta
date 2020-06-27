@@ -2,6 +2,18 @@
 
 {block name='frontend_index_content_inner'}
     <div class="content product--details" itemscope itemtype="http://schema.org/Product"{if !{config name=disableArticleNavigation}} data-product-navigation="{url module="widgets" controller="listing" action="productNavigation"}" data-category-id="{$sArticle.categoryID}" data-main-ordernumber="{$sArticle.mainVariantNumber}"{/if} data-ajax-wishlist="true" data-compare-ajax="true"{if $theme.ajaxVariantSwitch} data-ajax-variants-container="true"{/if}>
+        {s name="frontend/detail/social-linkss" namespace="frontend/detail"}
+            <div class="main-item-right">
+                <div class="social-links">
+                    <a class="twiter" href="#"></a>
+                    <a class="instagram" href="#"></a>
+                    <a class="facebook" href="#"></a>
+                </div>
+                <div class="follow">
+                    <a href="#">FOLGE UNS</a>
+                </div>
+            </div>
+        {/s}
 
         {* The configurator selection is checked at this early point
            to use it in different included files in the detail template. *}

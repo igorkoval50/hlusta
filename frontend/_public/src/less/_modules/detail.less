@@ -344,7 +344,7 @@
     border: none;
   }
   .image-slider--container .arrow.is--right:before {
-    transform: rotate(180deg);
+    background-image: url("../../img/icons/arrow-right-black.svg");
   }
 
   .image-slider--container .arrow:hover {
@@ -434,6 +434,104 @@
   .tab--container.has--content.is--active {
     .product-slider--arrow {
       display: none !important;
+    }
+  }
+  .image-slider--container .arrow.is--right:hover, .image-slider--container .arrow.is--left:hover {
+    &:before {
+      content: "";
+      background-image: url("../../img/icons/arrow-right.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 30px;
+      height: 19px;
+      display: inline-block;
+    }
+  }
+  .image-slider--container .arrow.is--left:hover {
+    &:before {
+      background-image: url("../../img/icons/arrow-red-left.svg");
+    }
+  }
+  .main-item-right {
+    right: -60px;
+    transform-origin: right center;
+    white-space: nowrap;
+    transform: rotate(270deg);
+    position: absolute;
+    bottom: auto;
+    margin-left: 1rem;
+    transition: all .5s;
+    z-index: 20;
+    display: flex;
+    justify-content: space-between;
+    width: 338px;
+    top: 30px;
+  }
+  .follow {
+    a {
+      .semibold;
+      color: @black;
+    }
+  }
+  .social-links {
+    display: flex;
+    margin-right: 0px;
+    width: 100px;
+    justify-content: space-between;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 62px;
+      height: 2px;
+      background-color: #707070;
+      top: 8px;
+      left: 150px;
+    }
+    a {
+      transform: rotate(90deg);
+      &:before {
+        content: "";
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+      }
+    }
+    .facebook {
+      &:before {
+        width: 10px;
+        height: 20px;
+        background-image: url("../../img/icons/facebook.svg");
+      }
+      &:hover {
+        &:before {
+          background-image: url("../../img/icons/facebook-red.svg");
+        }
+      }
+    }
+    .twiter {
+      &:before {
+        width: 18px;
+        height: 15px;
+        background-image: url("../../img/icons/twiter.svg");
+      }
+      &:hover {
+        &:before {
+          background-image: url("../../img/icons/twiter-red.svg");
+        }
+      }
+    }
+    .instagram {
+      &:before {
+        width: 18px;
+        height: 18px;
+        background-image: url("../../img/icons/instagram.svg");
+      }
+      &:hover {
+        &:before {
+          background-image: url("../../img/icons/instagram-red.svg");
+        }
+      }
     }
   }
 }
