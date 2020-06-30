@@ -18,5 +18,11 @@
 
     });
 
+    //marken category hide sidebar
+    if (window.location.href.indexOf("marken") > -1) {
+            $('.sidebar--categories-wrapper').css('display', 'none');
+            $('.content--wrapper').css('margin-left', 0)
+    }
+
 
 })(jQuery, window);
